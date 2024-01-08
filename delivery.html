@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book a delivery</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body onload=checkDelivery();>
+
+    <div class="main">
+        <div>
+            <button type="button" class="button" id="btnBack" style="float:right;">Back</button>
+        </div>
+        <div class="delContainer" id="deliveryWidth">
+
+           
+          
+              
+                <h1>Book a delivery</h1>
+                <p>Choose a delivery time. </p>
+
+                <div style="display:flex;align-items:center;">
+                    <button id="btn-change-book" class="button">Change booking</button>
+                    <button id="btn-checkout" class="button" type="button" data-url="payment.html">Payment</button>
+
+                </div>
+
+
+                <div id="clock" class="row calendar">
+                    <div class="label">Now</div>
+                    <div id="current-date" class="month"></div>
+                    <div id="current-time" class="time"></div>
+                </div>
+
+                <table id="tblBooking">
+                    <tr>
+                        <td>BETWEEN <BR />10:00AM TO 11:AM</td>
+                        <td>£3.50</td>
+                        <td><button class="button btn-book">Book</button></td>
+                    </tr>
+                    <tr>
+                        <td>BETWEEN <BR />11:00AM TO 12:PM</td>
+                        <td>£4.50</td>
+                        <td><button class="button btn-book">Book</button></td>
+                    </tr>
+                    <tr>
+                        <td>BETWEEN <BR />12:00PM TO 1:PM</td>
+                        <td>£5.50</td>
+                        <td><button class="button btn-book">Book</button></td>
+                    </tr>
+                    <tr>
+                        <td>BETWEEN <BR />1:00PM TO 2:PM</td>
+                        <td>£6.50</td>
+                        <td><button class="button btn-book">Book</button></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+
+   
+    </div>
+
+    <!-- <script src="main.js"></script>
+    <script src="dateTime.js"></script>
+    <script src="products.js"></script>
+    <script src="wholecart.js"></script>
+    <script src="filterSearchCount.js"></script>
+    <script src="cartStorage.js"></script>
+    <script src="favourites.js"></script> -->
+
+    <script src="allcode.js"></script>
+
+
+</body>
+
+</html>
