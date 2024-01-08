@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Favourites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+
+<body onload=displayFavourites();>
+    <header class="header">
+        <!-- <nav>
+            <ul>
+
+                <li><a href="store.html">STORE</a></li>
+
+                <li style="float: right; position:relative">
+                    <a href="#"><i class="fas fa-shopping-cart"></i>cart</a>
+                    <span class="badge" id="badge" style="position:absolute; left:-40px;bottom:3px;">0 </span>
+                </li>
+
+
+            </ul>
+        </nav>-->
+        <nav class="navbar">
+            <div>
+                <ul>
+                    <li><a href="store.html" style="color:white;">STORE</a></li>
+                </ul>
+                <div class="dropdown">
+                    <ul>
+                        <li style="float: right; position:relative">
+                            <a href="#" id="cart">
+                                <i class="fa fa-shopping-cart"></i> Cart
+                                <span id="badge" style="position:absolute; left:-70px;bottom:3px;">0</span></a>
+                        </li>
+                    </ul>
+                    <div class="dropdown-content">
+                        <p id="cartcontent"></p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <main>
+
+        <div class="delContainer">
+            <h1>Your favourites</h1>
+            <button type="button" class="button" id="btnBack">Back</button>
+            <p>Favourites from local storage</p>
+            <div id="favColl">
+                <p id="storedfavourites"></p>
+            </div>
+            <p id="all"></p>
+
+
+
+            <div id="favouritesList"></div>
+
+
+        </div>
+    </main>
+
+
+
+
+    <!-- <script src="main.js"></script>
+    <script src="dateTime.js"></script>
+    <script src="products.js"></script>
+    <script src="wholecart.js"></script>
+    <script src="filterSearchCount.js"></script>
+    <script src="cartStorage.js"></script>
+    <script src="favourites.js"></script> -->
+
+    <script src="allcode.js"></script>
+
+</body>
+
+</html>
