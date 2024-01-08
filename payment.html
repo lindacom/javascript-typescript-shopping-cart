@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+
+<body onload=checkOrder();>
+
+    <header class="header">
+        <nav class="navbar">
+            <div>
+                <ul>
+                    <li><a href="store.html" style="color:white;">STORE</a></li>
+                </ul>
+                <div class="dropdown">
+                    <ul>
+                        <li style="float: right; position:relative">
+                            <a href="#" id="cart">
+                                <i class="fa fa-shopping-cart"></i> Cart
+                                <span id="badge" style="position:absolute; left:-70px;bottom:3px;">0</span></a>
+                        </li>
+                    </ul>
+                    <div class="dropdown-content">
+                        <p id="cartcontent"></p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+
+      
+           
+<main>
+           
+  <section class="pmtContainer"> 
+
+            <!-- <div class="row"> -->
+
+            <!--column one
+        <div class="column left-two-column">-->
+
+            <!-- <div class="row"> -->
+
+            <!--  <div class="column left-col-banner-a">1</div> -->
+            <!--  <div class="column left-col-banner-b"> -->
+
+            <!-- <div class="row"> -->
+<!-- LEFT COLUMN-->
+            <div>
+                <h1>Checkout</h1>
+                <h2>Customer</h2>
+
+                <form action="" id="form-customer" class="contactForm">
+                    <fieldset>
+                        <legend>Complete the details below.</legend>
+                        <div class="frminp">
+                            <!-- <div class="row frminp"> -->
+                            <label for="field1">First name:* <input type="text" id="fname" required></label>
+                        </div>
+
+                        <div class="frminp">
+                            <!--  <div class="row frminp">-->
+                            <label for="field2">Last name:* <input type="text" id="lname" required></label>
+                        </div>
+
+                        <div class="frminp">
+                            <!-- <div class="row frminp">-->
+                            <label for="field3">Address 1:* <input type="text" id="address" size="40" required></label>
+                        </div>
+
+                        <div class="frminp">
+                            <!-- <div class="row frminp">-->
+                            <label for="field4">Town:* <input type="text" id="town" list="towns" required></label>
+                        </div>
+
+                        <div>
+                            <!-- <div class="row">-->
+                            <datalist id="towns">
+                                <option value="London"></option>
+                                <option value="Edinburgh"></option>
+                                <option value="Swansea"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="del-instr">
+                            <!--  <div class="row del-instr"> -->
+                            <label for="txtfield">Delivery instructions
+                                <textarea name="txtfield" id="charcount" cols="50" rows="10"
+                                    maxlength="100"></textarea></label>
+                            Count: <output name="count" id="count" for="charcount">0</output>
+                        </div>
+
+                    </fieldset>
+
+                </form>
+            </div>
+
+   </section> 
+
+
+            <!--column two-->
+            <!--  <div class="column" id="orderCol"> -->
+
+                <!-- RIGHT COLUMN -->
+            <div id="orderCol">
+
+                <div>
+                    <button type="button" class="button" class="btnBack">Back - continue shopping</button>
+                </div>
+
+                <div id="orderCol">
+
+                    <div id="orderBox">
+                        <h2>Your order</h2>
+                        <p id="order-msg">Getting items from session storage. </p>
+
+                        <table>
+                            <tr>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                            <tbody id="productsarray">
+
+                            </tbody>
+                        </table>
+                        <p><strong>Total:<output for="quantity price" id="total"></output></strong></p>
+                    </div>
+
+                    <div class="pmt-buttons-div">
+                        <button class="button" id="btn-confirm" data-url="confirmation.html" disabled>Confirm
+                            order</button>
+                        <button class="button" id="btn-delivery" data-url="delivery.html">Book a
+                            delivery</button>
+                    </div>
+                    <!-- card icons-->
+                    <div id="pmtIcons" class="pmt-icons-div">
+                        <a href="payment.html" id="visa" aria-label="visa"> <i class="fab fa-cc-visa fa-w-18 fa-3x"
+                                style="size:50px; color:navy;"></i></a>
+                        <a href="payment.html" id="amex" aria-label="amex"> <i class="fab fa-cc-amex fa-w-18 fa-3x"
+                                style="color:blue;"></i></a>
+                        <a href="payment.html" id="mastercard" aria-label="mastercard"> <i
+                                class="fab fa-cc-mastercard fa-w-18 fa-3x" style="color:red;"></i></a>
+                        <a href="payment.html" id="discover" aria-label="discover"> <i
+                                class="fab fa-cc-discover fa-w-18 fa-3x" style="color:orange;"></i></a>
+                    </div>
+
+                    <!--Booking time display-->
+                    <div id="book-check"><strong></strong></div>
+
+                </div>
+
+
+            </div>
+        </div>
+ 
+
+
+
+    <!-- <script src="main.js"></script>
+    <script src="dateTime.js"></script>
+    <script src="products.js"></script>
+    <script src="wholecart.js"></script>
+    <script src="filterSearchCount.js"></script>
+    <script src="cartStorage.js"></script>
+    <script src="favourites.js"></script> -->
+
+    <script src="allcode.js"></script>
+</body>
+
+</html>
