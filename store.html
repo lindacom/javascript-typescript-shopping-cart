@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+<!-- <body onload=displayAllProducts();> -->
+
+<body>
+
+    <!-- HEADER-->
+    <header class="header">
+        <nav>
+            <div>
+                <ul>
+
+                    <li><a href="store.html">STORE</a></li>
+                </ul>
+            </div>
+        </nav>
+        <article class="hero">
+            <h1>My store</h1>
+        </article>
+    </header>
+
+    <!-- MAIN -->
+ 
+      <!--  <article class="main"> -->
+            <!-- promo images -->
+            <!--div text-align: center;color: red; font-size:20px;-->
+            <!-- images width:43.33%;height:200px;float:left;-->
+
+            <!--changed to flexbox-->
+          <!--  <div class="promo-img-div"> -->
+
+            <!-- changed to css grid -->
+<article class="promo">
+
+    <figure>
+                <img id="myImage" class="promo-image" src="/images/burger.jpg" alt="avatar">
+                <caption> <h2><span class="txt-overlay">Coming soon:</span><br /><span class="txt-overlay">New range of
+                    soups</span></h2>
+                </caption>
+                </figure>
+
+                <figure> 
+                    <img id="myImage1" class="promo-image-blur" src="/images/soup.jpg" alt="avatar" />
+                <caption>   <h2><span class="txt-overlay">Special offer:</span><br /><span class="txt-overlay">Mince reduced
+                    this
+                    week</span></h2></caption>
+                </figure>
+                </article>
+
+              <!--  <div class="bottom-right-overlay">
+                    <h2><span class="txt-overlay">Coming soon:</span><br /><span class="txt-overlay">New range of
+                            soups</span></h2>
+                </div> -->
+
+               <!-- <div class="bottom-left-overlay">
+                    <h2><span class="txt-overlay">Special offer:</span><br /><span class="txt-overlay">Mince reduced
+                            this
+                            week</span></h2>
+                </div> -->
+
+         <!--   </div> -->
+
+           <!-- <hr style="clear:both" /> -->
+
+           <hr />
+
+           <main>
+            <div id="clock" class="row calendar">
+                <div class="label">Now</div>
+                <div id="current-date" class="month"></div>
+                <div id="current-time" class="time"></div>
+            </div>
+
+
+            <section class="content-section">
+
+                <!-- <div class="row"> -->
+                <div>
+                    <h2 class="section-title">Groceries</h2>
+                    <p class="section-sub-title">Groceries from a Javascript object array.</p>
+                </div>
+
+
+                <!-- <div class="row shop-filters"> -->
+
+                <!--USES FLEXBOX-->
+                <div class="shop-filters">
+                    <!-- categories N.b. radio buttons must have same name for the check uncheck to work automatically-->
+                    <!--  <div class="column" style="width:25%"> -->
+
+                    <div>
+                        <h2 class="shop-filters-title">Categories</h2>
+
+                        <p><a class="shop-filters-sub-title" href="store.html">Clear categories</a></p>
+                    </div>
+
+                    <div class="radioBtns">
+                        <!-- USES CSS GRID -->
+                        <input class="category" type="radio" id="meat" name="food" value="meat">
+                        <label class="shop-filters-label" for="meat">Meat</label>
+                        <input class="category" type="radio" id="sweets" name="food" value="sweets"> <label
+                            for="sweets">Sweets</label>
+                        <input class="category" type="radio" id="fruit" name="food" value="fruit"> <label
+                            for="fruit">Fruit</label>
+                        <input class="category" type="radio" id="drinks" name="food" value="drinks"> <label
+                            for="drinks">Drinks</label>
+                    </div>
+                    <!--END OF GRID-->
+
+                    <!--filter-->
+                    <!--  <div class="column" style="width:25%"> -->
+                    <div>
+                        <label for="filter" style="color:var(--white)">Filter products:</label>
+
+                        <select name="filter" id="prodFilter">
+                            <option value="">Select...</option>
+                            <option value="top-rated">Top rated</option>
+                            <option value="a-z">A-Z</option>
+                            <option value="low-high">Price low to high</option>
+                            <option value="high-low">Price high to low</option>
+                        </select>
+                    </div>
+
+                    <!--button-->
+                    <!--  <div class="column" style="width:25%"> -->
+                    <div>
+                        <button class="hollow-button" id="btnSlot" data-url="delivery.html">Book a slot</button>
+                    </div>
+
+                    <!--button-->
+                    <!-- <div class="column" style="width:25%;"> -->
+                    <div>
+                        <button class="hollow-button" id="shopFavourites" data-url="favourites.html">Shop from
+                            favourites</button>
+                    </div>
+                </div>
+                <!--END OF FLEXBOX-->
+
+
+
+                <!-- <div class="row">
+                <div class="column"> -->
+                
+                    <div id="alertMsg">Added to favourites</div>
+                   <!--<div class="shop-items" id="productsList"></div>-->
+               
+
+
+                <!--  <div class="row">
+                <div class="column"> -->
+              
+                    <div id="search-alert">Added to favourites</div>
+                
+
+           
+
+            <!-- PRODUCTS USING CSS GRID-->
+          <!--  <div class="shop-items mainContainer" id="productsList"> -->
+         <!--   <section class="content-section"> -->
+            <div class="shop-items" id="productsList">
+            </div>
+      <!--  </section> -->
+            <!--END-->
+
+           
+
+                <div class="cart-row" id="whole-cart">
+                    <hr />
+                    <h2>CART</h2>
+                    <span class="close-cart" id="close-cart"><a href="javascript:void(0);" class="close-cart-icon"><i
+                                class="fas fa-window-close fa-2x"></i></a></span>
+                    <button class="button" id="btn-clear-cart" type="button" style="float: right;">Clear
+                        cart</button><br />
+
+
+                    <p>Place cart items in local storage</p>
+                    <table id="mytable">
+                        <tr>
+                            <th class="cart-item cart-header cart-column">ITEM</th>
+                            <th class="cart-price cart-header cart-column">PRICE</th>
+                            <th class="cart-quantity cart-header cart-column">QUANTITY</th>
+                            <th class=" cart-header cart-column">TOTAL</th>
+                            <th></th>
+                        </tr>
+
+                        <tbody class="cart-items" id="cart-items">
+
+                            <tr class="cart-total" id="cart-total">
+
+                            </tr>
+                        </tbody>
+                        <tr>
+                            <td class="cart-total-title">Grand total</td>
+                            <td class="cart-total-price" id="cart-total-price">0.00</td>
+                        </tr>
+
+                    </table>
+
+
+                    <hr />
+                    <div id="payment">
+
+                        <!-- card icons-->
+                        <div class="store-pmt-icons-div" id="pmtIcons">
+                            <a href="payment.html" id="visa" aria-label="visa"> <i class="fab fa-cc-visa fa-w-18 fa-3x"
+                                    style="size:50px; color:navy;"></i></a>
+                            <a href="payment.html" id="amex" aria-label="amex"> <i class="fab fa-cc-amex fa-w-18 fa-3x"
+                                    style="color:blue;"></i></a>
+                            <a href="payment.html" id="mastercard" aria-label="mastercard"> <i
+                                    class="fab fa-cc-mastercard fa-w-18 fa-3x" style="color:red;"></i></a>
+                            <a href="payment.html" id="discover" aria-label="discover"> <i
+                                    class="fab fa-cc-discover fa-w-18 fa-3x" style="color:orange;"></i></a>
+                        </div>
+
+                        <button class="button hollow-button" id="btn-pmt" style="clear:both;" type="button"
+                            data-url="payment.html">Payment</button>
+                    </div>
+
+                </div>
+            </section>
+
+            </div>
+        </article>
+        <aside class="sidebar1">
+            <!-- search box -->
+            <!-- <div class="row">
+            <div class="column form-group sbox" style="clear:both;"> -->
+            <div>
+                <div class="form-group sbox" style="clear:both;">
+                    <h2 class="quick-search-title">Quick search</h2>
+                    <input type="search" name="search_box" id="search_box" class="form-control"
+                        placeholder="Search by title, author or category" role="search">
+
+                </div>
+        </aside>
+        <aside id="sidebar2">
+            <!-- mouseover and mouseout -->
+
+            <!--<div class="column">-->
+            <div>
+                <button style="float: right;" type="button" class="button" onmouseover="mOver(this)"
+                    onmouseout="mOut(this)">Mouseover banner ad</button>
+                <hr />
+            </div>
+
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <section class="frmfooter" id="contact">
+            <h3>Got questions? Get in touch</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu turpis
+            euismod, sodales mi et, elementum lorem. In finibus metus metus, vel tristique tortor cursus at. Praesent at
+            orci semper, mollis tellus eu, euismod risus. Donec vitae leo imperdiet, luctus elit sed, pretium mi.
+            Aliquam viverra et ligula sit amet pharetra. Quisque rutrum facilisis suscipit. Vestibulum bibendum bibendum
+            elementum. Vestibulum congue interdum tortor, at lobortis ligula cursus a. Aliquam eget ex sit amet quam
+            imperdiet lacinia et congue nulla. Praesent facilisis massa leo, a fermentum magna molestie eu. Fusce at
+            convallis turpis. Suspendisse nec lacus velit. Maecenas id ante ex.
+        </section>
+        <section class="social">
+            <h3>Let's be social</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu turpis euismod,
+            sodales mi et, elementum lorem. In finibus metus metus, vel tristique tortor cursus at. Praesent at orci
+            semper, mollis tellus eu, euismod risus. Donec vitae leo imperdiet, luctus elit sed, pretium mi. Aliquam
+            viverra et ligula sit amet pharetra. Quisque rutrum facilisis suscipit. Vestibulum bibendum bibendum
+            elementum. Vestibulum congue interdum tortor, at lobortis ligula cursus a. Aliquam eget ex sit amet quam
+            imperdiet lacinia et congue nulla. Praesent facilisis massa leo, a fermentum magna molestie eu. Fusce at
+            convallis turpis. Suspendisse nec lacus velit. Maecenas id ante ex.
+        </section>
+        <section class="contactInfo">
+            <h4>Contact information</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu turpis euismod,
+            sodales mi et, elementum lorem. In finibus metus metus, vel tristique tortor cursus at. Praesent at orci
+            semper, mollis tellus eu, euismod risus. Donec vitae leo imperdiet, luctus elit sed, pretium mi. Aliquam
+            viverra et ligula sit amet pharetra. Quisque rutrum facilisis suscipit. Vestibulum bibendum bibendum
+            elementum. Vestibulum congue interdum tortor, at lobortis ligula cursus a. Aliquam eget ex sit amet quam
+            imperdiet lacinia et congue nulla. Praesent facilisis massa leo, a fermentum magna molestie eu. Fusce at
+            convallis turpis. Suspendisse nec lacus velit. Maecenas id ante ex.
+        </section>
+
+    </footer>
+
+     <script src="main.js"></script>
+    <script src="dateTime.js"></script>
+    <script src="products.js"></script>
+    <script src="wholecart.js"></script>
+    <script src="filterSearchCount.js"></script>
+    <script src="cartStorage.js"></script>
+    <script src="favourites.js"></script> 
+
+  <!--  <script src="allcode.js"></script> -->
+
+
+
+
+</body>
+
+</html>
