@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Order confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+
+<body onload=orderComplete();>
+    <main>
+
+
+        <div class="delContainer" id="deliveryWidth">
+            <h1>Order Confirmation</h1>
+
+
+
+            <h2>Your order</h2>
+            <table style="width:100%">
+                <th style="width:25%"><strong>item</strong></th>
+                <th style="width:25%"><strong>price</strong></th>
+                <th style="width:25%"><strong>quantity</strong></th>
+                <th style="width:25%"><strong>total</strong></th>
+                <tr>
+                    <td style="width:25%">
+                        <p id="order-msg"></p>
+                    </td>
+                </tr>
+                <tbody id="productsarray"></tbody>
+
+            </table>
+
+            <h2>Delivery time and cost</h2>
+            <div id="alert-book-msg"></div>
+            <p id="bookingarray"></p>
+
+            <h2>Delivery address</h2>
+            <div id="alert-book-address"></div>
+            <p id="addressarray"></p>
+
+            <a href="store.html" id="ordered">Return to store</a>
+        </div>
+
+
+    </main>
+
+
+
+
+    <!-- <script src="main.js"></script>
+    <script src="dateTime.js"></script>
+    <script src="products.js"></script>
+    <script src="wholecart.js"></script>
+    <script src="filterSearchCount.js"></script>
+    <script src="cartStorage.js"></script>
+    <script src="favourites.js"></script> -->
+
+    <script src="allcode.js"></script>
+</body>
+
+</html>
